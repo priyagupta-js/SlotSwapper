@@ -59,7 +59,7 @@ router.post('/swap-request', async (req, res) => {
     await mySlot.save();
     await theirSlot.save();
 
-    // res.status(201).json(swapReq);
+    res.status(201).json(swapReq);
   } catch (err) {
     console.error('Swap request error:', err);
     res.status(500).json({ message: 'Server error' });
